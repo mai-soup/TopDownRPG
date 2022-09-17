@@ -8,6 +8,7 @@ public class Chest : Collectable {
 
     protected override void Start() {
         base.Start();
+        // pesos amount is random between 5 and 10 inclusive
         pesosAmount = Random.Range(5, 11);
     }
 

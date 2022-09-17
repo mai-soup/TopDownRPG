@@ -734,7 +734,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -755,7 +755,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -763,6 +763,27 @@ TextureImporter:
       bones: []
       spriteID: 076ff29f6747313478be46eed0866c71
       internalID: 375240056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_open_0
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a719fdd6b26ed74fb18ae1cb9d15396
+      internalID: 594217182
       vertices: []
       indices: 
       edges: []
@@ -791,6 +812,8 @@ TextureImporter:
       pillar_standalone_0: 1536527043
       floor_5: 1616347544
       floor_8: -1935406898
+      door_open_3: -1280209501
+      door_open_0: 594217182
       player_0: -1843693195
       floor_4: 1518019738
       healing_fountain_0: 1661690801
@@ -802,6 +825,8 @@ TextureImporter:
       floor_1: -1986562811
       wall_4: 737443264
       crate_2: 1413346190
+      door_open_2: -734855687
+      door_open_1: -1557426654
       floor_3: 303680001
       floor_2: -2057355150
       chest_1: 375240056
