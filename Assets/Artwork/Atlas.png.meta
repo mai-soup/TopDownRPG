@@ -788,6 +788,195 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: weapon_0
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 481
+        width: 12
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bebe9ccd934e45428db3da7c534cc42
+      internalID: 1881149788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword_0
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 465
+        width: 12
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46c460474dc967247bd05296a1b7fde4
+      internalID: -1815170415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword_1
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 465
+        width: 12
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0d1cfa6c13234748a3f6323cbd824ea
+      internalID: -183270919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword_2
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 465
+        width: 12
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0a1920ddabf44d48b0b479a22fb9851
+      internalID: -1402892227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword_3
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 401
+        width: 12
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e69fae28e67fbb48afa2a821a751e76
+      internalID: 378557870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword_4
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 401
+        width: 12
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e55dbd1554ffd95438f4f1135737f5c3
+      internalID: 1473379873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword_5
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 401
+        width: 12
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8332de595a227fb48a23b2ceb5cd1764
+      internalID: -83664538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword_6
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 337
+        width: 12
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05f1669dc7c348e47885f7eac6206e92
+      internalID: -127094445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword_7
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 337
+        width: 12
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7aa62127182e704f9afc23bdd7b1122
+      internalID: -1658141977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -799,41 +988,50 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      player_1: 952112380
       pillar_wall_1: 2017344349
-      pillar_standalone_2: -43321402
       chest_0: 1099576780
       stairs_0: 833800891
-      wall_2: 2014523572
-      wall_6: -76871266
+      sword_2: -1402892227
       stairs_1: 445020026
       floor_7: -528982618
       wall_1: -1330818698
       pillar_standalone_0: 1536527043
       floor_5: 1616347544
-      floor_8: -1935406898
-      door_open_3: -1280209501
-      door_open_0: 594217182
+      sword_0: -1815170415
       player_0: -1843693195
       floor_4: 1518019738
       healing_fountain_0: 1661690801
-      healing_fountain_1: 939330061
       wall_3: -1164985615
+      wall_5: -1247959736
       healing_fountain_2: 932861156
       pillar_wall_0: -419657313
-      wall_5: -1247959736
-      floor_1: -1986562811
-      wall_4: 737443264
       crate_2: 1413346190
-      door_open_2: -734855687
+      sword_7: -1658141977
+      sword_5: -83664538
       door_open_1: -1557426654
-      floor_3: 303680001
       floor_2: -2057355150
       chest_1: 375240056
-      pillar_standalone_1: 1625930535
+      sword_4: 1473379873
       pillar_wall_2: 993195734
       floor_6: -1423919022
       crate_0: -451888861
+      player_1: 952112380
+      weapon_0: 1881149788
+      pillar_standalone_2: -43321402
+      wall_2: 2014523572
+      sword_3: 378557870
+      wall_6: -76871266
+      floor_8: -1935406898
+      door_open_3: -1280209501
+      door_open_0: 594217182
+      healing_fountain_1: 939330061
+      sword_1: -183270919
+      floor_1: -1986562811
+      wall_4: 737443264
+      door_open_2: -734855687
+      sword_6: -127094445
+      floor_3: 303680001
+      pillar_standalone_1: 1625930535
       crate_1: 680905979
   spritePackingTag: 
   pSDRemoveMatte: 0
