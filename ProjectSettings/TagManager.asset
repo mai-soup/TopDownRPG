@@ -47,3 +47,6 @@ TagManager:
   - name: Creatures
     uniqueID: 362587553
     locked: 0
+  - name: Interactable
+    uniqueID: 1114260079
+    locked: 0

@@ -725,6 +725,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: chest_0
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d523681b5ba86684d8754d571137854f
+      internalID: 1099576780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest_1
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 076ff29f6747313478be46eed0866c71
+      internalID: 375240056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -739,6 +781,7 @@ TextureImporter:
       player_1: 952112380
       pillar_wall_1: 2017344349
       pillar_standalone_2: -43321402
+      chest_0: 1099576780
       stairs_0: 833800891
       wall_2: 2014523572
       wall_6: -76871266
@@ -761,6 +804,7 @@ TextureImporter:
       crate_2: 1413346190
       floor_3: 303680001
       floor_2: -2057355150
+      chest_1: 375240056
       pillar_standalone_1: 1625930535
       pillar_wall_2: 993195734
       floor_6: -1423919022

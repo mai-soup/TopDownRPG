@@ -28,8 +28,8 @@ public class Collidable : MonoBehaviour {
         }
     }
 
-    protected virtual void OnCollide(Collider2D collision) {
+    protected virtual void OnCollide(Collider2D collider) {
         // log what the object collided with
-        Debug.Log(collision.name);
+        Debug.Log(collider.name);
     }
 }
