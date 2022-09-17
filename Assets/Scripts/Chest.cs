@@ -16,7 +16,13 @@ public class Chest : Collectable {
         if (!isCollected) {
             base.OnCollect();
             GetComponent<SpriteRenderer>().sprite = emptyChestSprite;
-            Debug.Log("Give " + pesosAmount + " pesos");
+            GameManager.instance.ShowText(pesosAmount + " pesos",
+                16,                 // size
+                Color.yellow,
+                transform.position, // position - of the chest in question
+                Vector3.up * 24,    // direction - up, 48 screen px/s
+                1.25f                // duration - 3.0 seconds
+                );
         }
     }
 }

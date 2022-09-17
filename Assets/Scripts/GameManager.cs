@@ -34,11 +34,19 @@ public class GameManager : MonoBehaviour {
 
     // refs
     public Player player;
+    public FloatingTextManager floatingTextMgr;
     // public Weapon weapon etc
 
-    // trackers
+    // logic
     public int pesos;
     public int xp;
+
+    // we basically call the same function here so that it's available
+    // everywhere via the game manager
+    public void ShowText(string msg, int fontSize, Color color, Vector3 pos,
+        Vector3 motion, float duration) {
+        floatingTextMgr.Show(msg, fontSize, color, pos, motion, duration);
+    }
 
     // save state
     public void SaveState() {
