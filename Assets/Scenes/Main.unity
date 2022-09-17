@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 468791209}
   - component: {fileID: 468791208}
   m_Layer: 9
-  m_Name: player_0
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -306,7 +306,7 @@ GameObject:
   - component: {fileID: 508691709}
   - component: {fileID: 508691707}
   - component: {fileID: 508691711}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: chest_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -432,6 +432,8 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+  emptyChestSprite: {fileID: 375240056, guid: 15db0dffd65fe7d4c992c9eb219a5fe1, type: 3}
+  pesosAmount: 0
 --- !u!1 &869032785
 GameObject:
   m_ObjectHideFlags: 0
