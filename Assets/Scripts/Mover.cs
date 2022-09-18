@@ -15,7 +15,7 @@ public abstract class Mover : Fighter {
 
     protected virtual void UpdateMotor(Vector3 input) {
         // reset move delta
-        moveDelta = input;
+        moveDelta = new Vector3(input.x * xSpeed, input.y * ySpeed, 0);
 
         // change sprite direction depending on move direction
         if (moveDelta.x > 0) {
