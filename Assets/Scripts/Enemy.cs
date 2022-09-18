@@ -43,9 +43,12 @@ public class Enemy : Mover {
             }
         } else {
             // is the player still within chasing range?
-            if (distance < chaseLength && !isCollidingWithPlayer) {
+            if (distance < chaseLength) {
+                // we aren't colliding with the player already, are we?
+                if (!isCollidingWithPlayer) {
                 // yes, move towards player
                 UpdateMotor((playerTransform.position - transform.position).normalized);
+                }
             } else {
                 // player escaped, go back to starting point
                 UpdateMotor((startingPos - transform.position).normalized);
