@@ -34,7 +34,7 @@ public class Weapon : Collidable {
     protected override void OnCollide(Collider2D collider) {
         // if the weapon hits a fighter thats not the player itself
         if (collider.tag == "Fighter" && collider.name != "Player") {
-            // create a damage object to send to the hit fighter
+            // create a damage struct to send to the hit fighter
             Damage dmg = new Damage {
                 damage = damagePoints,
                 origin = transform.position,
