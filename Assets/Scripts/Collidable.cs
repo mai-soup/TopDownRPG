@@ -30,6 +30,7 @@ public class Collidable : MonoBehaviour {
 
     protected virtual void OnCollide(Collider2D collider) {
         // log what the object collided with
-        Debug.Log(collider.name);
+        Debug.Log("OnCollide not implemented in child " + this.name + 
+            ". Collided with" + collider.name);
     }
 }
