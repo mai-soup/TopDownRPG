@@ -15,6 +15,7 @@ public class Chest : Collectable {
     protected override void OnCollect() {
         if (!isCollected) {
             base.OnCollect();
+            GameManager.instance.pesos += pesosAmount;
             GetComponent<SpriteRenderer>().sprite = emptyChestSprite;
             GameManager.instance.ShowText(pesosAmount + " pesos",
                 16,                 // size
