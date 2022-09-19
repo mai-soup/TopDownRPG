@@ -29,13 +29,12 @@ public class GameManager : MonoBehaviour {
     // game resources
     public List<Sprite> playerSprites;
     public List<Sprite> weaponSprites;
-    public List<int>    weaponPrices;
     public List<int>    xpTable;
 
     // refs
     public Player player;
     public FloatingTextManager floatingTextMgr;
-    // public Weapon weapon etc
+    public Weapon weapon;
 
     // logic
     public int pesos;
@@ -46,6 +45,24 @@ public class GameManager : MonoBehaviour {
     public void ShowText(string msg, int fontSize, Color color, Vector3 pos,
         Vector3 motion, float duration) {
         floatingTextMgr.Show(msg, fontSize, color, pos, motion, duration);
+    }
+
+    // weapon upgrade
+    public bool TryUpgradeWeapon() {
+        // is weapon already maxed?
+        if (Weapon.prices.Length <= weapon.weaponLevel) {
+            // can't upgrade weapon, already max
+            return false;
+        }
+
+        // do we have enough pesos to upgrade?
+        if (pesos >= Weapon.prices[weapon.weaponLevel]) {
+            pesos -= Weapon.prices[weapon.weaponLevel];
+            weapon.UpgradeWeapon();
+            return true;
+        }
+
+        return false;
     }
 
     // save state

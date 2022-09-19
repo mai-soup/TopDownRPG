@@ -42,14 +42,18 @@ public class PauseMenu : MonoBehaviour {
 
     // weapon upgrade
     public void OnWpnUpgradeClick() {
-        // TODO: implement
+        // if weapon upgrade can be done successfully, update menu
+        if(GameManager.instance.TryUpgradeWeapon()) {
+            UpdateMenu();
+        }
     }
 
     // update chara info
     public void UpdateMenu() {
-        // TODO: weapon
-        weaponSprite.sprite = GameManager.instance.weaponSprites[0];
-        upgradeCostText.text = "IMPLEMENT THIS";
+        weaponSprite.sprite = GameManager.instance.weaponSprites[
+            GameManager.instance.weapon.weaponLevel];
+        upgradeCostText.text = Weapon.prices[
+            GameManager.instance.weapon.weaponLevel].ToString();
 
         // TODO: implement level
         levelText.text = "IMPLEMENT THIS";

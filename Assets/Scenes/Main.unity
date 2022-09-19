@@ -1005,7 +1005,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 570447984}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1067132010}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: OnWpnUpgradeClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &570447984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9605,8 +9617,6 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  damagePoints: 1
-  pushForce: 2
   weaponLevel: 0
 --- !u!212 &904343707
 SpriteRenderer:
@@ -13383,10 +13393,10 @@ MonoBehaviour:
   - {fileID: -83664538, guid: 15db0dffd65fe7d4c992c9eb219a5fe1, type: 3}
   - {fileID: -127094445, guid: 15db0dffd65fe7d4c992c9eb219a5fe1, type: 3}
   - {fileID: -1658141977, guid: 15db0dffd65fe7d4c992c9eb219a5fe1, type: 3}
-  weaponPrices: 
   xpTable: 
   player: {fileID: 468791213}
   floatingTextMgr: {fileID: 881948831}
+  weapon: {fileID: 904343706}
   pesos: 0
   xp: 0
 --- !u!4 &1801128538
