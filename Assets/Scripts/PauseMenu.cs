@@ -58,7 +58,7 @@ public class PauseMenu : MonoBehaviour {
         // TODO: implement pesos
         pesosText.text = GameManager.instance.pesos.ToString();
 
-        // xp bar
+        // TODO: xp bar
         xpText.text = "IMPLEMENT THIS";
         xpBar.localScale = new Vector3(0.5f, 1, 1);
 
