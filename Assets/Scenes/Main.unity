@@ -12322,6 +12322,7 @@ MonoBehaviour:
   pesosText: {fileID: 520412102}
   upgradeCostText: {fileID: 1633206115}
   xpText: {fileID: 1117427723}
+  upgradeCostBtn: {fileID: 570447983}
   charSelectionSprite: {fileID: 966885664}
   weaponSprite: {fileID: 1077198734}
   xpBar: {fileID: 1386630505}

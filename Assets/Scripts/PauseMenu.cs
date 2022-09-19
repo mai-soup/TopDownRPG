@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour {
     public Text levelText, hpText, pesosText, upgradeCostText, xpText;
+    public Button upgradeCostBtn;
     private int currentCharSelection = 0;
     public Image charSelectionSprite;
     public Image weaponSprite;
@@ -55,6 +56,7 @@ public class PauseMenu : MonoBehaviour {
         int nextPrice = Weapon.prices[
             GameManager.instance.weapon.weaponLevel];
         upgradeCostText.text = (nextPrice > 0) ? nextPrice.ToString() : "";
+        upgradeCostBtn.interactable = (nextPrice > 0);
 
         // TODO: implement level
         levelText.text = "IMPLEMENT THIS";
