@@ -69,7 +69,7 @@ public class PauseMenu : MonoBehaviour {
 
         // if we are max level, display total xp
         int currentLevel = GameManager.instance.GetCurrentLevel();
-        int totalXp = GameManager.instance.xp;
+        int totalXp = GameManager.instance.GetXp();
         int xpGoal = GameManager.instance.XpDiffNextLevel(currentLevel);
         int currentXp = totalXp - GameManager.instance.XpTotalByLevel(currentLevel - 1);
         if (currentLevel == GameManager.MAX_LEVEL) {

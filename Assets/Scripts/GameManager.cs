@@ -42,7 +42,23 @@ public class GameManager : MonoBehaviour {
 
     // logic
     public int pesos;
-    public int xp;
+    private int xp;
+
+    public int GetXp() {
+        return xp;
+    }
+
+    public void GrantXp(int xpToAdd) {
+        int prevLevel = GetCurrentLevel();
+        xp += xpToAdd;
+        if (prevLevel < GetCurrentLevel()) {
+            OnLevelUp();
+        }
+    }
+
+    protected void OnLevelUp() {
+        player.OnLevelUp();
+    }
 
     // we basically call the same function here so that it's available
     // everywhere via the game manager
@@ -85,10 +101,12 @@ public class GameManager : MonoBehaviour {
         if (!PlayerPrefs.HasKey(SAVE_EXISTS))
             return;
 
-        // skin = prefs load
         pesos = PlayerPrefs.GetInt(SAVE_PESOS);
         xp = PlayerPrefs.GetInt(SAVE_XP);
         weapon.SetWeaponLevel(PlayerPrefs.GetInt(SAVE_WEAPON_LVL));
+
+        // level up player correctly
+        player.SetLevel(GetCurrentLevel());
     }
 
     public int XpDiffNextLevel(int currentLevel) {

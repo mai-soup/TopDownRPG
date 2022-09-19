@@ -31,6 +31,8 @@ public class FloatingText {
             Hide();
         }
 
+        // TODO: get the text to keep floating up from where it was
+        // in game coordinates, not screen.
         // if active and not hidden, move up for frame
         go.transform.position += motion * Time.deltaTime;
     }

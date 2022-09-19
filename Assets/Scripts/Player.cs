@@ -14,4 +14,16 @@ public class Player : Mover {
     public void ChangeSprite(Sprite newSprite) {
         GetComponent<SpriteRenderer>().sprite = newSprite;
     }
+
+    public void OnLevelUp() {
+        // TODO: add some indicator for the level up
+        maxHp += 3;
+        currentHp = maxHp;
+    }
+
+    public void SetLevel(int lvl) {
+        for (int i = 0; i < lvl - 1; i++) {
+            OnLevelUp();
+        }
+    }
 }
