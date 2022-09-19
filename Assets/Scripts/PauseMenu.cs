@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour {
-    public Text levelText, hpText, pesosText, upgradeCostText, xpText;
+        public Text levelText, hpText, pesosText, upgradeCostText, xpText;
     public Button upgradeCostBtn;
     private int currentCharSelection = 0;
     public Image charSelectionSprite;
@@ -61,16 +61,26 @@ public class PauseMenu : MonoBehaviour {
         upgradeCostText.text = (nextPrice > 0) ? nextPrice.ToString() : "MAX";
         upgradeCostBtn.interactable = (nextPrice > 0);
 
-        // TODO: implement level
-        levelText.text = "IMPLEMENT THIS";
+        levelText.text = GameManager.instance.GetCurrentLevel().ToString();
         hpText.text = GameManager.instance.player.currentHp.ToString() +
             "/" + GameManager.instance.player.maxHp.ToString();
-        // TODO: implement pesos
         pesosText.text = GameManager.instance.pesos.ToString();
 
-        // TODO: xp bar
-        xpText.text = "IMPLEMENT THIS";
-        xpBar.localScale = new Vector3(0.5f, 1, 1);
+
+        // if we are max level, display total xp
+        int currentLevel = GameManager.instance.GetCurrentLevel();
+        int totalXp = GameManager.instance.xp;
+        int xpGoal = GameManager.instance.XpDiffNextLevel(currentLevel);
+        int currentXp = totalXp - GameManager.instance.XpTotalByLevel(currentLevel - 1);
+        if (currentLevel == GameManager.MAX_LEVEL) {
+            xpText.text = totalXp.ToString() + 
+                " XP";
+            xpBar.localScale = Vector3.one;
+        } else {
+            // if we are not max level, show xp we have and xp to next lvl
+            xpText.text = currentXp.ToString() + "/" + xpGoal + " XP";
+            xpBar.localScale = new Vector3((float)currentXp / xpGoal, 1, 1);
+        }
 
     }
 }

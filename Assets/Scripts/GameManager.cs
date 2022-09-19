@@ -11,6 +11,11 @@ public class GameManager : MonoBehaviour {
     public static readonly string SAVE_WEAPON_LVL = "WeaponLvl";
     public static readonly string SAVE_EXISTS = "Saved";
 
+    protected static readonly float xpIncreaseRate = 2.4f;
+    protected static readonly float xpConstant = 0.5f;
+    // TODO: edit depending on the max level you decided on
+    public static readonly int MAX_LEVEL = 10;
+
     private void Awake() {
         // if instange of game manager already exists, destroy the new
         // one before returning
@@ -29,7 +34,6 @@ public class GameManager : MonoBehaviour {
     // game resources
     public List<Sprite> playerSprites;
     public List<Sprite> weaponSprites;
-    public List<int>    xpTable;
 
     // refs
     public Player player;
@@ -85,5 +89,36 @@ public class GameManager : MonoBehaviour {
         pesos = PlayerPrefs.GetInt(SAVE_PESOS);
         xp = PlayerPrefs.GetInt(SAVE_XP);
         weapon.SetWeaponLevel(PlayerPrefs.GetInt(SAVE_WEAPON_LVL));
+    }
+
+    public int XpDiffNextLevel(int currentLevel) {
+        // TODO: account for max lvl
+        float totalForNextLevel =
+            Mathf.Pow((currentLevel / xpConstant), xpIncreaseRate);
+        float totalForCurrentLevel =
+            Mathf.Pow(((currentLevel - 1) / xpConstant), xpIncreaseRate);
+
+        if (currentLevel == 1) totalForCurrentLevel = 0;
+
+        return Mathf.FloorToInt(totalForNextLevel - totalForCurrentLevel);
+    }
+
+    public int XpTotalByLevel(int level) {
+        // TODO: account for max lvl
+        float totalForLevel =
+            Mathf.Pow((level / xpConstant), xpIncreaseRate);
+
+        return Mathf.FloorToInt(totalForLevel);
+    }
+
+    public int LevelFromXp(int currentXp) {
+        // TODO: account for max lvl
+        return Mathf.CeilToInt(xpConstant * 
+                        Mathf.Pow(currentXp + 1, 1 / xpIncreaseRate));
+    }
+
+    public int GetCurrentLevel() {
+        // TODO: account for max lvl
+        return LevelFromXp(xp);
     }
 }
