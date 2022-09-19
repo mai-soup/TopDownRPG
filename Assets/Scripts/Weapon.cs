@@ -5,11 +5,11 @@ using UnityEngine;
 public class Weapon : Collidable {
     // dmg struct
     public static readonly int[] damagePoints =
-        { 1,    2,    3,    4,    5,    6,    10,    12 };
+        { 1,    2,    3,    4,    5,    6,    7,    10,   12 };
     public static readonly float[] pushForce = 
-        { 2.0f, 2.2f, 2.4f, 2.7f, 3.0f, 3.3f, 3.6f, 4.0f };
+        { 2.0f, 2.1f, 2.2f, 2.4f, 2.6f, 3.0f, 3.3f, 3.6f, 4.0f };
     public static readonly int[] prices =
-        { 50,   100,  160,  250,  375,  500,  750 };
+        { 50,   100,  160,  250,  375,  500,  750,  1000, -1 };
 
     // upgrades
     public int weaponLevel = 0;

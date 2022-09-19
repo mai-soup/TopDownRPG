@@ -52,8 +52,9 @@ public class PauseMenu : MonoBehaviour {
     public void UpdateMenu() {
         weaponSprite.sprite = GameManager.instance.weaponSprites[
             GameManager.instance.weapon.weaponLevel];
-        upgradeCostText.text = Weapon.prices[
-            GameManager.instance.weapon.weaponLevel].ToString();
+        int nextPrice = Weapon.prices[
+            GameManager.instance.weapon.weaponLevel];
+        upgradeCostText.text = (nextPrice > 0) ? nextPrice.ToString() : "";
 
         // TODO: implement level
         levelText.text = "IMPLEMENT THIS";

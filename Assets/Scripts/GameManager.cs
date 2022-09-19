@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour {
     // weapon upgrade
     public bool TryUpgradeWeapon() {
         // is weapon already maxed?
-        if (Weapon.prices.Length <= weapon.weaponLevel) {
+        if (Weapon.prices.Length <= weapon.weaponLevel + 1) {
             // can't upgrade weapon, already max
             return false;
         }
