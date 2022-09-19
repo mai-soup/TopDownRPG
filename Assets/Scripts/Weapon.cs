@@ -20,9 +20,12 @@ public class Weapon : Collidable {
     private float lastSwing;
     private Animator animator;
 
+    protected void Awake() {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
     protected override void Start() {
         base.Start();
-        spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
     }
 
@@ -61,5 +64,11 @@ public class Weapon : Collidable {
             GameManager.instance.weaponSprites[weaponLevel];
 
         // TODO: refresh stats
+    }
+
+    public void SetWeaponLevel(int level) {
+        weaponLevel = level;
+        spriteRenderer.sprite =
+            GameManager.instance.weaponSprites[weaponLevel];
     }
 }

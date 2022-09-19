@@ -10,4 +10,8 @@ public class Player : Mover {
 
         UpdateMotor(new Vector3(dx, dy, 0));
     }
+
+    public void ChangeSprite(Sprite newSprite) {
+        GetComponent<SpriteRenderer>().sprite = newSprite;
+    }
 }

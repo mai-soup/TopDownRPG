@@ -71,7 +71,7 @@ public class GameManager : MonoBehaviour {
         PlayerPrefs.SetInt(SAVE_SKIN_PREF, 0);
         PlayerPrefs.SetInt(SAVE_PESOS, pesos);
         PlayerPrefs.SetInt(SAVE_XP, xp);
-        PlayerPrefs.SetInt(SAVE_WEAPON_LVL, 0);
+        PlayerPrefs.SetInt(SAVE_WEAPON_LVL, weapon.weaponLevel);
         // extra key to assert that some data is saved
         PlayerPrefs.SetInt(SAVE_EXISTS, 1);
     }
@@ -84,6 +84,6 @@ public class GameManager : MonoBehaviour {
         // skin = prefs load
         pesos = PlayerPrefs.GetInt(SAVE_PESOS);
         xp = PlayerPrefs.GetInt(SAVE_XP);
-        // weapon = prefs load
+        weapon.SetWeaponLevel(PlayerPrefs.GetInt(SAVE_WEAPON_LVL));
     }
 }

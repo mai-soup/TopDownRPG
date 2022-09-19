@@ -37,8 +37,11 @@ public class PauseMenu : MonoBehaviour {
     }
 
     private void OnSelectionChange() {
-        charSelectionSprite.sprite =
-            GameManager.instance.playerSprites[currentCharSelection];
+        // change sprite in menu
+        Sprite newSprite = GameManager.instance.playerSprites[currentCharSelection];
+        charSelectionSprite.sprite = newSprite;
+        // change player sprite
+        GameManager.instance.player.ChangeSprite(newSprite);
     }
 
     // weapon upgrade
@@ -55,7 +58,7 @@ public class PauseMenu : MonoBehaviour {
             GameManager.instance.weapon.weaponLevel];
         int nextPrice = Weapon.prices[
             GameManager.instance.weapon.weaponLevel];
-        upgradeCostText.text = (nextPrice > 0) ? nextPrice.ToString() : "";
+        upgradeCostText.text = (nextPrice > 0) ? nextPrice.ToString() : "MAX";
         upgradeCostBtn.interactable = (nextPrice > 0);
 
         // TODO: implement level
