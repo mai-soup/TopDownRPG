@@ -298,6 +298,18 @@ MonoBehaviour:
           m_StringArgument: Show
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1067132010}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: UpdateMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &7801428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12160,6 +12172,7 @@ GameObject:
   - component: {fileID: 1067132004}
   - component: {fileID: 1067132009}
   - component: {fileID: 1067132008}
+  - component: {fileID: 1067132010}
   m_Layer: 5
   m_Name: PauseMenu
   m_TagString: Untagged
@@ -12226,7 +12239,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &1067132007
 RectTransform:
@@ -12282,6 +12295,26 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1067132010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067132003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1258a43c5023bed4b911532110af5b5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelText: {fileID: 1394299474}
+  hpText: {fileID: 835170107}
+  pesosText: {fileID: 520412102}
+  upgradeCostText: {fileID: 1633206115}
+  xpText: {fileID: 1117427723}
+  charSelectionSprite: {fileID: 966885664}
+  weaponSprite: {fileID: 1077198734}
+  xpBar: {fileID: 1386630505}
 --- !u!1 &1077198732
 GameObject:
   m_ObjectHideFlags: 0
@@ -12527,7 +12560,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1890291683}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -12708,7 +12741,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1890291683}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
@@ -13340,7 +13373,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSprites: []
-  weaponSprites: []
+  weaponSprites:
+  - {fileID: 1881149788, guid: 15db0dffd65fe7d4c992c9eb219a5fe1, type: 3}
+  - {fileID: -1815170415, guid: 15db0dffd65fe7d4c992c9eb219a5fe1, type: 3}
+  - {fileID: -183270919, guid: 15db0dffd65fe7d4c992c9eb219a5fe1, type: 3}
+  - {fileID: -1402892227, guid: 15db0dffd65fe7d4c992c9eb219a5fe1, type: 3}
+  - {fileID: 378557870, guid: 15db0dffd65fe7d4c992c9eb219a5fe1, type: 3}
+  - {fileID: 1473379873, guid: 15db0dffd65fe7d4c992c9eb219a5fe1, type: 3}
+  - {fileID: -83664538, guid: 15db0dffd65fe7d4c992c9eb219a5fe1, type: 3}
+  - {fileID: -127094445, guid: 15db0dffd65fe7d4c992c9eb219a5fe1, type: 3}
+  - {fileID: -1658141977, guid: 15db0dffd65fe7d4c992c9eb219a5fe1, type: 3}
   weaponPrices: 
   xpTable: 
   player: {fileID: 468791213}
@@ -13392,8 +13434,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1117427722}
   - {fileID: 1386630505}
+  - {fileID: 1117427722}
   m_Father: {fileID: 2052442200}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
