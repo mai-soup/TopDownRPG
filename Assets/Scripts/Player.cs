@@ -38,4 +38,15 @@ public class Player : Mover {
             OnLevelUp();
         }
     }
+
+    public void Heal(int amount) {
+        if (amount <= 0) return;
+
+        // heal but not over max xp
+        if (currentHp + amount > maxHp) {
+            currentHp = maxHp;
+        } else {
+            currentHp += amount;
+        }
+    }
 }

@@ -159,7 +159,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: healing_fountain_0
+      name: healing_fountain_top
       rect:
         serializedVersion: 2
         x: 96
@@ -175,48 +175,6 @@ TextureImporter:
       bones: []
       spriteID: a39b16a3fe556fc458e31c989a8002f6
       internalID: -1629541915
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: healing_fountain_1
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 480
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eada2aa926bbe9b42a8ea4353cd7e524
-      internalID: 939330061
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: healing_fountain_2
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 464
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fb05554a6ac89fe4e84191d777d59792
-      internalID: 932861156
       vertices: []
       indices: 
       edges: []
@@ -998,6 +956,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: healing_fountain_full_0
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 464
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66b994484001f934e916b16d3d469abf
+      internalID: 1930770015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: healing_fountain_empty_0
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 432
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee54b521a75538f41adbbf746c96bdbf
+      internalID: -1570340737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -1021,15 +1021,16 @@ TextureImporter:
       sword_0: -1815170415
       player_0: -1843693195
       floor_4: 1518019738
-      healing_fountain_0: 1661690801
+      healing_fountain_2: 932861156
       wall_3: -1164985615
       wall_5: -1247959736
-      healing_fountain_2: 932861156
       pillar_wall_0: -419657313
+      healing_fountain_empty_0: -1570340737
       crate_2: 1413346190
       sword_7: -1658141977
       sword_5: -83664538
       door_open_1: -1557426654
+      healing_fountain_top: -1629541915
       floor_2: -2057355150
       chest_1: 375240056
       sword_4: 1473379873
@@ -1037,6 +1038,7 @@ TextureImporter:
       pillar_wall_2: 993195734
       floor_6: -1423919022
       crate_0: -451888861
+      healing_fountain_full_0: 1930770015
       player_1: 952112380
       weapon_0: 1881149788
       pillar_standalone_2: -43321402
