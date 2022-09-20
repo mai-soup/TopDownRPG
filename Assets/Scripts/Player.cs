@@ -3,6 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : Mover {
+    public static Player instance;
+
+    protected void Awake() {
+        // persist object between scenes but without duplicates
+        if (instance == null) {
+            instance = this;
+        } else if (instance != this) {
+            Destroy(gameObject);
+        }
+        DontDestroyOnLoad(gameObject);
+    }
+
     private void FixedUpdate() {
         // get delta x and y
         float dx = Input.GetAxisRaw("Horizontal");

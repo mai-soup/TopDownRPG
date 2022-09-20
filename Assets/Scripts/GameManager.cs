@@ -107,6 +107,10 @@ public class GameManager : MonoBehaviour {
 
         // level up player correctly
         player.SetLevel(GetCurrentLevel());
+
+        // put player on spawn point
+        player.transform.position =
+            GameObject.Find("PlayerSpawnPoint").transform.position;
     }
 
     public int XpDiffNextLevel(int currentLevel) {
