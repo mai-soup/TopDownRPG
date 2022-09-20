@@ -327,15 +327,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crate_2
+      name: crate_single
       rect:
         serializedVersion: 2
         x: 80
         y: 128
         width: 16
-        height: 16
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -348,36 +348,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crate_3
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 144
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8009763d254ceac4fbbefa7bfeee4539
-      internalID: -1385969786
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: crate_4
+      name: crate_double
       rect:
         serializedVersion: 2
         x: 96
         y: 128
         width: 16
-        height: 16
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -385,27 +364,6 @@ TextureImporter:
       bones: []
       spriteID: 47e881c41f865b443aa2634865f27b5d
       internalID: -700119076
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: crate_5
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 144
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 02e1812a510c17c46bc19ff06ad00861
-      internalID: 1847668861
       vertices: []
       indices: 
       edges: []
@@ -428,15 +386,15 @@ TextureImporter:
       torch_2: 1381983333
       torch_7: -1010435977
       stairs_7: -2083491554
+      crate_single: -802783928
       stairs_5: 815151907
-      crate_4: -700119076
       torch_8: -7392037
       torch_6: -936610860
-      crate_2: -802783928
       torch_3: -639683107
       stairs_2: 1965364336
       torch_4: -2051365978
       crate_3: -1385969786
+      crate_double: -700119076
       stairs_3: 1118824563
       stairs_4: -1325378326
       torch_1: 589247162

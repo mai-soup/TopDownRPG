@@ -21,5 +21,6 @@ public class HealingFountain : Collectable {
                 1.25f                // duration - 3.0 seconds
                 );
         }
+        // TODO: restore after some time?
     }
 }
