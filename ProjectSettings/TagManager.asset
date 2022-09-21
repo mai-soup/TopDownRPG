@@ -45,11 +45,11 @@ TagManager:
   - name: Floor
     uniqueID: 2232768833
     locked: 0
-  - name: Creatures
-    uniqueID: 362587553
-    locked: 0
   - name: Interactable
     uniqueID: 1114260079
+    locked: 0
+  - name: Creatures
+    uniqueID: 362587553
     locked: 0
   - name: Weapon
     uniqueID: 2479034953
