@@ -5,16 +5,6 @@ using UnityEngine;
 public class Player : Mover {
     public static Player instance;
 
-    protected void Awake() {
-        // persist object between scenes but without duplicates
-        if (instance == null) {
-            instance = this;
-        } else if (instance != this) {
-            Destroy(gameObject);
-        }
-        DontDestroyOnLoad(gameObject);
-    }
-
     private void FixedUpdate() {
         // get delta x and y
         float dx = Input.GetAxisRaw("Horizontal");
@@ -31,6 +21,7 @@ public class Player : Mover {
         // TODO: add some indicator for the level up
         maxHp += 3;
         currentHp = maxHp;
+        GameManager.instance.OnHpChange();
     }
 
     public void SetLevel(int lvl) {

@@ -18,17 +18,20 @@ public class GameManager : MonoBehaviour {
 
     private void Awake() {
         // if instange of game manager already exists, destroy the new
-        // one before returning
+        // one before returning. we want a singleton to be able to access
+        // anywhere in code.
         if (instance != null) {
             Destroy(gameObject);
+            Destroy(player.gameObject);
+            Destroy(floatingTextMgr.gameObject);
+            Destroy(HUD.gameObject);
             return;
         }
 
         instance = this;
         // load state when scene loaded
         SceneManager.sceneLoaded += LoadState;
-        // persist game manager between scenes
-        DontDestroyOnLoad(gameObject);
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     // game resources
@@ -40,10 +43,11 @@ public class GameManager : MonoBehaviour {
     public FloatingTextManager floatingTextMgr;
     public Weapon weapon;
     public RectTransform currentHpBar;
+    public Canvas HUD;
 
     // logic
     public int pesos;
-    private int xp;
+    [SerializeField] private int xp;
 
     public int GetXp() {
         return xp;
@@ -64,6 +68,16 @@ public class GameManager : MonoBehaviour {
     public void OnHpChange() {
         float ratio = (float)player.GetCurrentHp() / (float)player.maxHp;
         currentHpBar.localScale = new Vector3(ratio, 1, 1);
+    }
+
+    public void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
+        MovePlayerToSpawn();
+    }
+
+    public void MovePlayerToSpawn() {
+        // put player on spawn point
+        player.transform.position =
+            GameObject.Find("PlayerSpawnPoint").transform.position;
     }
 
     // we basically call the same function here so that it's available
@@ -103,6 +117,10 @@ public class GameManager : MonoBehaviour {
     }
 
     public void LoadState(Scene scene, LoadSceneMode mode) {
+        // dont load data every time we switch scenes,
+        // we just needed it for the first one
+        SceneManager.sceneLoaded += LoadState;
+
         // if no save data exists, theres nothing to load
         if (!PlayerPrefs.HasKey(SAVE_EXISTS))
             return;
@@ -114,9 +132,7 @@ public class GameManager : MonoBehaviour {
         // level up player correctly
         player.SetLevel(GetCurrentLevel());
 
-        // put player on spawn point
-        player.transform.position =
-            GameObject.Find("PlayerSpawnPoint").transform.position;
+        MovePlayerToSpawn();
 
         // update the hp bar
         OnHpChange();

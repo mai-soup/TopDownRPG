@@ -12571,6 +12571,7 @@ GameObject:
   - component: {fileID: 1203503190}
   - component: {fileID: 1203503189}
   - component: {fileID: 1203503188}
+  - component: {fileID: 1203503192}
   m_Layer: 5
   m_Name: HUD
   m_TagString: Untagged
@@ -12661,6 +12662,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1203503192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203503187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3983fac6e935da34a8b2f35f98bdda0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1386630504
 GameObject:
   m_ObjectHideFlags: 0
@@ -13217,6 +13230,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1801128538}
   - component: {fileID: 1801128537}
+  - component: {fileID: 1801128539}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -13253,7 +13267,9 @@ MonoBehaviour:
   floatingTextMgr: {fileID: 2016753801}
   weapon: {fileID: 904343706}
   currentHpBar: {fileID: 410985602}
+  HUD: {fileID: 1203503190}
   pesos: 0
+  xp: 0
 --- !u!4 &1801128538
 Transform:
   m_ObjectHideFlags: 0
@@ -13269,6 +13285,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1801128539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801128536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3983fac6e935da34a8b2f35f98bdda0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1890291682
 GameObject:
   m_ObjectHideFlags: 0
@@ -13417,6 +13445,7 @@ GameObject:
   - component: {fileID: 2016753798}
   - component: {fileID: 2016753797}
   - component: {fileID: 2016753801}
+  - component: {fileID: 2016753802}
   m_Layer: 5
   m_Name: FloatingTextManager
   m_TagString: Untagged
@@ -13519,6 +13548,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textContainer: {fileID: 2016753796}
   textPrefab: {fileID: 968389510014799490, guid: cbab1631fc2c6374d87d15ba5f64f5ca, type: 3}
+--- !u!114 &2016753802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2016753796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3983fac6e935da34a8b2f35f98bdda0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2052442199
 GameObject:
   m_ObjectHideFlags: 0

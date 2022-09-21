@@ -4,21 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class FloatingTextManager : MonoBehaviour {
-    public static FloatingTextManager instance;
-
     public GameObject textContainer;
     public GameObject textPrefab;
     private List<FloatingText> floatingTexts = new List<FloatingText>();
-
-    private void Awake() {
-        // persist object between scenes but without duplicates
-        if (instance == null) {
-            instance = this;
-        } else if (instance != this) {
-            Destroy(gameObject);
-        }
-        DontDestroyOnLoad(gameObject);
-    }
 
     public void Show(string msg, int fontSize, Color color, Vector3 pos,
         Vector3 motion, float duration) {
