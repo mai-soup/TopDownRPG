@@ -7,6 +7,7 @@ public class Fighter : MonoBehaviour {
     public int maxHp = 10;
     public float pushRecoverySpeed = 0.2f;  // recovery time after being pushed
     protected float immuneTime = 1.0f;      // so hits cant just be spammed
+    // TODO: determine by the attacker, not defender.
     protected float lastImmune;
     protected Vector3 pushVector;           // direction and amount to push
 

@@ -6,6 +6,8 @@ public class Player : Mover {
     public static Player instance;
 
     private void FixedUpdate() {
+        if (GameManager.instance.isPaused) return;
+
         // get delta x and y
         float dx = Input.GetAxisRaw("Horizontal");
         float dy = Input.GetAxisRaw("Vertical");
@@ -46,5 +48,10 @@ public class Player : Mover {
     public override void ReduceHp(int dmg) {
         base.ReduceHp(dmg);
         GameManager.instance.OnHpChange();
+    }
+
+    protected override void Die() {
+        GameManager.instance.PauseGame();
+        GameManager.instance.deathMenuAnimator.SetTrigger("Show");
     }
 }

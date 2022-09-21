@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour {
     protected static readonly float xpConstant = 0.5f;
     // TODO: edit depending on the max level you decided on
     public static readonly int MAX_LEVEL = 10;
-    public static bool IS_PAUSED = false;
+    public bool isPaused = false;
 
     private void Awake() {
         // if instange of game manager already exists, destroy the new
@@ -45,6 +45,7 @@ public class GameManager : MonoBehaviour {
     public Weapon weapon;
     public RectTransform currentHpBar;
     public Canvas HUD;
+    public Animator deathMenuAnimator;
 
     // logic
     public int pesos;
@@ -174,11 +175,17 @@ public class GameManager : MonoBehaviour {
         // TODO: check for pause status before moving or fighting
         // TODO: prevent control input
         Time.timeScale = 0;
-        IS_PAUSED = true;
+        isPaused = true;
     }
 
     public void UnpauseGame() {
         Time.timeScale = 1;
-        IS_PAUSED = false;
+        isPaused = false;
+    }
+
+    public void Respawn() {
+        deathMenuAnimator.SetTrigger("Hide");
+        UnpauseGame();
+        SceneManager.LoadScene("Main");
     }
 }
