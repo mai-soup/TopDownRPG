@@ -186,6 +186,13 @@ public class GameManager : MonoBehaviour {
     public void Respawn() {
         deathMenuAnimator.SetTrigger("Hide");
         UnpauseGame();
+        // TODO: manage where exactly the player respawns
+        // TODO: should player be back on full health upon respawn?
+        //          some kind of penalty?
+        // TODO: set players last immune to Time.time so we dont get
+        //          hit immediately
+        // TODO: set players push vector to zero so we dont still 
+        //          get yeeted from last time
         SceneManager.LoadScene("Main");
     }
 }

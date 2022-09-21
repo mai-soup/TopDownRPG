@@ -8,10 +8,12 @@ public abstract class Mover : Fighter {
     protected RaycastHit2D hit;
     [SerializeField] protected float xSpeed = 1.0f;
     protected float ySpeed;
+    private Vector3 originalSize;
 
     protected virtual void Start() {
         boxCollider = GetComponent<BoxCollider2D>();
         ySpeed = 0.75f * xSpeed;
+        originalSize = transform.localScale;
     }
 
     protected virtual void UpdateMotor(Vector3 input) {
@@ -20,9 +22,9 @@ public abstract class Mover : Fighter {
 
         // change sprite direction depending on move direction
         if (moveDelta.x > 0) {
-            transform.localScale = Vector3.one;
+            transform.localScale = originalSize;
         } else if (moveDelta.x < 0) {
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(-1*originalSize.x, originalSize.y, 1);
         } // else not moving on x axis, don't want to change direction
 
         // add push vector, if any
