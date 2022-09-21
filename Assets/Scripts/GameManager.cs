@@ -108,6 +108,7 @@ public class GameManager : MonoBehaviour {
     }
 
     // save state
+    // TODO: way to exit game
     public void SaveState() {
         // save state to player prefs
         PlayerPrefs.SetInt(SAVE_SKIN_PREF, 0);

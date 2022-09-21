@@ -10,6 +10,7 @@ public class Door : Collidable {
             GameManager.instance.SaveState();
 
             // teleport player to random scene
+            // TODO: some kind of loading screen
             string scene = sceneNames[Random.Range(0, sceneNames.Length)];
             SceneManager.LoadScene(scene);
         }
