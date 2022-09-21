@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Chest : Collectable {
+    // TODO: give chests a chance to be mimics.
     public Sprite emptyChestSprite;
     public int pesosAmount;
 

@@ -51,6 +51,12 @@ TagManager:
   - name: Creatures
     uniqueID: 362587553
     locked: 0
+  - name: CrateSingle
+    uniqueID: 3170982543
+    locked: 0
   - name: Weapon
     uniqueID: 2479034953
+    locked: 0
+  - name: CrateDouble
+    uniqueID: 902523193
     locked: 0
