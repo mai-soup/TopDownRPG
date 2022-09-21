@@ -965,7 +965,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -986,7 +986,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -994,6 +994,48 @@ TextureImporter:
       bones: []
       spriteID: ee54b521a75538f41adbbf746c96bdbf
       internalID: -1570340737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 208
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3414deefe4eb3a642a33aee9a9597e74
+      internalID: 51973969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_1_0
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 464
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c11e388b8f4c874a8e0dbb0a1050f3c
+      internalID: -1151890972
       vertices: []
       indices: 
       edges: []
@@ -1035,6 +1077,7 @@ TextureImporter:
       chest_1: 375240056
       sword_4: 1473379873
       enemy_0: -1226000096
+      boss_0: 51973969
       pillar_wall_2: 993195734
       floor_6: -1423919022
       crate_0: -451888861
@@ -1055,6 +1098,7 @@ TextureImporter:
       door_open_2: -734855687
       sword_6: -127094445
       floor_3: 303680001
+      enemy_1_0: -1151890972
       pillar_standalone_1: 1625930535
       crate_1: 680905979
   spritePackingTag: 

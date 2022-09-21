@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour {
     protected static readonly float xpConstant = 0.5f;
     // TODO: edit depending on the max level you decided on
     public static readonly int MAX_LEVEL = 10;
+    public static bool IS_PAUSED = false;
 
     private void Awake() {
         // if instange of game manager already exists, destroy the new
@@ -167,5 +168,17 @@ public class GameManager : MonoBehaviour {
     public int GetCurrentLevel() {
         // TODO: account for max lvl
         return LevelFromXp(xp);
+    }
+
+    public void PauseGame() {
+        // TODO: check for pause status before moving or fighting
+        // TODO: prevent control input
+        Time.timeScale = 0;
+        IS_PAUSED = true;
+    }
+
+    public void UnpauseGame() {
+        Time.timeScale = 1;
+        IS_PAUSED = false;
     }
 }

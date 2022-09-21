@@ -6,11 +6,12 @@ public abstract class Mover : Fighter {
     protected BoxCollider2D boxCollider;
     protected Vector3 moveDelta;
     protected RaycastHit2D hit;
-    protected float ySpeed = 0.75f;
-    protected float xSpeed = 1.0f;
+    [SerializeField] protected float xSpeed = 1.0f;
+    protected float ySpeed;
 
     protected virtual void Start() {
         boxCollider = GetComponent<BoxCollider2D>();
+        ySpeed = 0.75f * xSpeed;
     }
 
     protected virtual void UpdateMotor(Vector3 input) {
