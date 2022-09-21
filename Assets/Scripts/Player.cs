@@ -48,5 +48,12 @@ public class Player : Mover {
         } else {
             currentHp += amount;
         }
+
+        GameManager.instance.OnHpChange();
+    }
+
+    public override void ReduceHp(int dmg) {
+        base.ReduceHp(dmg);
+        GameManager.instance.OnHpChange();
     }
 }

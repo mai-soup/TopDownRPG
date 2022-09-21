@@ -62,7 +62,7 @@ public class PauseMenu : MonoBehaviour {
         upgradeCostBtn.interactable = (nextPrice > 0);
 
         levelText.text = GameManager.instance.GetCurrentLevel().ToString();
-        hpText.text = GameManager.instance.player.currentHp.ToString() +
+        hpText.text = GameManager.instance.player.GetCurrentHp().ToString() +
             "/" + GameManager.instance.player.maxHp.ToString();
         pesosText.text = GameManager.instance.pesos.ToString();
 

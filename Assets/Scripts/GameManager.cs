@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour {
     public Player player;
     public FloatingTextManager floatingTextMgr;
     public Weapon weapon;
+    public RectTransform currentHpBar;
 
     // logic
     public int pesos;
@@ -58,6 +59,11 @@ public class GameManager : MonoBehaviour {
 
     protected void OnLevelUp() {
         player.OnLevelUp();
+    }
+
+    public void OnHpChange() {
+        float ratio = (float)player.GetCurrentHp() / (float)player.maxHp;
+        currentHpBar.localScale = new Vector3(ratio, 1, 1);
     }
 
     // we basically call the same function here so that it's available
@@ -111,6 +117,9 @@ public class GameManager : MonoBehaviour {
         // put player on spawn point
         player.transform.position =
             GameObject.Find("PlayerSpawnPoint").transform.position;
+
+        // update the hp bar
+        OnHpChange();
     }
 
     public int XpDiffNextLevel(int currentLevel) {
