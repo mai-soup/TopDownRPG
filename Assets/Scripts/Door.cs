@@ -5,14 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class Door : Collidable {
     public string[] sceneNames;
+
     protected override void OnCollide(Collider2D collider) {
         if (collider.name == "Player") {
             GameManager.instance.SaveState();
 
             // teleport player to random scene
-            // TODO: some kind of loading screen
             string scene = sceneNames[Random.Range(0, sceneNames.Length)];
-            SceneManager.LoadScene(scene);
+            LevelManager.instance.LoadScene(scene);
+            // prevent the door keeping being in use and making infinite loads
+            Destroy(gameObject);
         }
     }
 }
