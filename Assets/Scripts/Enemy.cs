@@ -29,6 +29,8 @@ public class Enemy : Mover {
     }
 
     private void FixedUpdate() {
+        if (GameManager.instance.isPaused) return;
+
         float distance = Vector3.Distance(playerTransform.position, transform.position);
         // if not already chasing the player, check if 
         // a chase should be triggered

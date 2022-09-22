@@ -173,8 +173,6 @@ public class GameManager : MonoBehaviour {
     }
 
     public void PauseGame() {
-        // TODO: check for pause status before moving or fighting
-        // TODO: prevent control input
         Time.timeScale = 0;
         isPaused = true;
     }

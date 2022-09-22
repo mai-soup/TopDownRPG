@@ -32,6 +32,8 @@ public class Weapon : Collidable {
     protected override void Update() {
         base.Update();
 
+        if (GameManager.instance.isPaused) return;
+
         if (Input.GetKeyDown(KeyCode.Space)) {
             if (Time.time - lastSwing > cooldown) {
                 lastSwing = Time.time;

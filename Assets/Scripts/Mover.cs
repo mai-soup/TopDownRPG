@@ -17,6 +17,8 @@ public abstract class Mover : Fighter {
     }
 
     protected virtual void UpdateMotor(Vector3 input) {
+        if (GameManager.instance.isPaused) return;
+
         // reset move delta
         moveDelta = new Vector3(input.x * xSpeed, input.y * ySpeed, 0);
 
