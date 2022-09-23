@@ -957,7 +957,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: healing_fountain_full_0
+      name: healing_fountain_full_2
       rect:
         serializedVersion: 2
         x: 96
@@ -978,7 +978,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: healing_fountain_empty_0
+      name: healing_fountain_empty_2
       rect:
         serializedVersion: 2
         x: 96
@@ -1028,7 +1028,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1036,6 +1036,90 @@ TextureImporter:
       bones: []
       spriteID: 3c11e388b8f4c874a8e0dbb0a1050f3c
       internalID: -1151890972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: healing_fountain_full_1
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 464
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0175748e386a284ea797d35df03ecf0
+      internalID: -784696714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: healing_fountain_full_0
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 464
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a715d164d3837624ab381c77e71e48da
+      internalID: -1770255013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: healing_fountain_empty_1
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 432
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee18deef0019ab248847b7ba6b43efaf
+      internalID: -1994501848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: healing_fountain_empty_0
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 432
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ce8fcb36c88683488ba33968671e77e
+      internalID: -1182046533
       vertices: []
       indices: 
       edges: []
@@ -1061,13 +1145,14 @@ TextureImporter:
       pillar_standalone_0: 1536527043
       floor_5: 1616347544
       sword_0: -1815170415
+      healing_fountain_full_2: 1930770015
       player_0: -1843693195
       floor_4: 1518019738
       healing_fountain_2: 932861156
       wall_3: -1164985615
       wall_5: -1247959736
       pillar_wall_0: -419657313
-      healing_fountain_empty_0: -1570340737
+      healing_fountain_empty_0: -1182046533
       crate_2: 1413346190
       sword_7: -1658141977
       sword_5: -83664538
@@ -1081,13 +1166,15 @@ TextureImporter:
       pillar_wall_2: 993195734
       floor_6: -1423919022
       crate_0: -451888861
-      healing_fountain_full_0: 1930770015
+      healing_fountain_full_0: -1770255013
       player_1: 952112380
       weapon_0: 1881149788
       pillar_standalone_2: -43321402
+      healing_fountain_full_1: -784696714
       wall_2: 2014523572
       sword_3: 378557870
       wall_6: -76871266
+      healing_fountain_empty_2: -1570340737
       floor_8: -1935406898
       door_open_0: 594217182
       door_open_3: -1280209501
@@ -1099,6 +1186,7 @@ TextureImporter:
       sword_6: -127094445
       floor_3: 303680001
       enemy_1_0: -1151890972
+      healing_fountain_empty_1: -1994501848
       pillar_standalone_1: 1625930535
       crate_1: 680905979
   spritePackingTag: 

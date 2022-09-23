@@ -13,12 +13,11 @@ public class GameManager : MonoBehaviour {
 
     protected static readonly float xpIncreaseRate = 2.4f;
     protected static readonly float xpConstant = 0.5f;
-    // TODO: edit depending on the max level you decided on
     public static readonly int MAX_LEVEL = 10;
     public bool isPaused = false;
 
     private void Awake() {
-        // if instange of game manager already exists, destroy the new
+        // if instance of game manager already exists, destroy the new
         // one before returning. we want a singleton to be able to access
         // anywhere in code.
         if (instance != null) {
