@@ -168,8 +168,8 @@ public class GameManager : MonoBehaviour {
     }
 
     public int GetCurrentLevel() {
-        // TODO: account for max lvl
-        return LevelFromXp(xp);
+        // return level calculated from xp or max level, whichever's smaller
+        return (LevelFromXp(xp) > MAX_LEVEL) ? MAX_LEVEL : LevelFromXp(xp);
     }
 
     public void PauseGame() {
