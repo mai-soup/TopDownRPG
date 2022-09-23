@@ -162,14 +162,14 @@ public class GameManager : MonoBehaviour {
     }
 
     public int LevelFromXp(int currentXp) {
-        // TODO: account for max lvl
-        return Mathf.CeilToInt(xpConstant * 
+        // return level calculated from xp or max level, whichever's smaller
+        int level = Mathf.CeilToInt(xpConstant * 
                         Mathf.Pow(currentXp + 1, 1 / xpIncreaseRate));
+        return (level > MAX_LEVEL) ? MAX_LEVEL : level;
     }
 
     public int GetCurrentLevel() {
-        // return level calculated from xp or max level, whichever's smaller
-        return (LevelFromXp(xp) > MAX_LEVEL) ? MAX_LEVEL : LevelFromXp(xp);
+        return LevelFromXp(xp);
     }
 
     public void PauseGame() {
