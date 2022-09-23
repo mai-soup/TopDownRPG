@@ -142,7 +142,8 @@ public class GameManager : MonoBehaviour {
     }
 
     public int XpDiffNextLevel(int currentLevel) {
-        // TODO: account for max lvl
+        if (currentLevel >= MAX_LEVEL) return 0;
+
         float totalForNextLevel =
             Mathf.Pow((currentLevel / xpConstant), xpIncreaseRate);
         float totalForCurrentLevel =
@@ -154,7 +155,8 @@ public class GameManager : MonoBehaviour {
     }
 
     public int XpTotalByLevel(int level) {
-        // TODO: account for max lvl
+        if (level >= MAX_LEVEL) return XpTotalByLevel(MAX_LEVEL - 1) + 1;
+
         float totalForLevel =
             Mathf.Pow((level / xpConstant), xpIncreaseRate);
 
