@@ -54,4 +54,14 @@ public class Player : Mover {
         GameManager.instance.PauseGame();
         GameManager.instance.deathMenuAnimator.SetTrigger("Show");
     }
+
+    public void OnRespawn() {
+        // reset movement stuff so it doesnt execute on respawn
+        lastImmune = Time.time;
+        pushVector = Vector3.zero;
+
+        // restore hp to max
+        currentHp = maxHp;
+        // TODO: should there be some kind of penalty for having died?
+    }
 }
