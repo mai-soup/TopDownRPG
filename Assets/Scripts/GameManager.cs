@@ -35,6 +35,17 @@ public class GameManager : MonoBehaviour {
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
+    private void Update() {
+        // pressing the esc key opens or closes pause menu
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            if (isPaused) {
+                OnClosePauseMenu();
+            } else {
+                OnOpenPauseMenu();
+            }
+        }
+    }
+
     // game resources
     public List<Sprite> playerSprites;
     public List<Sprite> weaponSprites;
@@ -46,6 +57,7 @@ public class GameManager : MonoBehaviour {
     public RectTransform currentHpBar;
     public Canvas HUD;
     public Animator deathMenuAnimator;
+    [SerializeField] private PauseMenu pauseMenu;
 
     // logic
     public int pesos;
@@ -195,5 +207,16 @@ public class GameManager : MonoBehaviour {
         // TODO: set players push vector to zero so we dont still 
         //          get yeeted from last time
         SceneManager.LoadScene("Main");
+    }
+
+    public void OnOpenPauseMenu() {
+        pauseMenu.GetComponent<Animator>().SetTrigger("Show");
+        pauseMenu.UpdateMenu();
+        PauseGame();
+    }
+
+    public void OnClosePauseMenu() {
+        pauseMenu.GetComponent<Animator>().SetTrigger("Hide");
+        UnpauseGame();
     }
 }

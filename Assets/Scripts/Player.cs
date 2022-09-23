@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : Mover {
     public static Player instance;
+    public static readonly int LEVELUP_HP_CHANGE = 3;
 
     private void FixedUpdate() {
         if (GameManager.instance.isPaused) return;
@@ -20,8 +21,7 @@ public class Player : Mover {
     }
 
     public void OnLevelUp() {
-        // TODO: add some indicator for the level up
-        maxHp += 3;
+        maxHp += LEVELUP_HP_CHANGE;
         currentHp = maxHp;
         GameManager.instance.OnHpChange();
     }

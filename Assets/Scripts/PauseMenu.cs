@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour {
-    // TODO: also open upon hitting ESC
     public Text levelText, hpText, pesosText, upgradeCostText, xpText;
     public Button upgradeCostBtn;
     private int currentCharSelection = 0;

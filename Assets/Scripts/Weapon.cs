@@ -64,8 +64,6 @@ public class Weapon : Collidable {
         weaponLevel++;
         spriteRenderer.sprite =
             GameManager.instance.weaponSprites[weaponLevel];
-
-        // TODO: refresh stats
     }
 
     public void SetWeaponLevel(int level) {
