@@ -5,7 +5,7 @@ using UnityEngine;
 public class TalkingNPC : Collidable {
     public string msg;
     private float lastTriggered;
-    private static readonly float triggerCooldown = 0.1f;
+    private static readonly float triggerCooldown = 0.01f;
     protected override void OnCollide(Collider2D collider) {
         // if the collider is a player, keep showing a message until they
         // leave

@@ -10,6 +10,7 @@ public class FloatingText {
     public Vector3 motion;
     public float duration;
     public float lastShown;
+    public Vector3 worldPos;
 
     public void Show() {
         isActive = true;
@@ -31,9 +32,11 @@ public class FloatingText {
             Hide();
         }
 
-        // TODO: get the text to keep floating up from where it was
-        // in game coordinates, not screen.
-        // if active and not hidden, move up for frame
-        go.transform.position += motion * Time.deltaTime;
+        // if active and not hidden, move up for one frame.
+        // anchor the text to its initial object by using world
+        // space coordinates to calculate movement, then convert to
+        // screen coordinates to show.
+        worldPos += motion / 100 * Time.deltaTime;
+        go.transform.position = Camera.main.WorldToScreenPoint(worldPos);
     }
 }

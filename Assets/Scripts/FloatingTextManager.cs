@@ -17,6 +17,8 @@ public class FloatingTextManager : MonoBehaviour {
         ft.text.color = color;
         // transfer world space to screen space - ui text uses screen space!
         ft.go.transform.position = Camera.main.WorldToScreenPoint(pos);
+        // also save pos in world space to anchor the text to the object not point on camera
+        ft.worldPos = pos;
         ft.motion = motion;
         ft.duration = duration;
 
