@@ -22,8 +22,8 @@ public class Chest : Collectable {
                 16,                 // size
                 Color.yellow,
                 transform.position, // position - of the chest in question
-                Vector3.up * 24,    // direction - up, 48 screen px/s
-                1.25f                // duration - 3.0 seconds
+                Vector3.up * 24,    // direction - up, 24 screen px/s
+                1.25f                // duration - 1.25 seconds
                 );
         }
     }

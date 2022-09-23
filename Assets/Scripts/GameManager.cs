@@ -77,6 +77,29 @@ public class GameManager : MonoBehaviour {
 
     protected void OnLevelUp() {
         player.OnLevelUp();
+        BoxCollider2D playerBoxColl = player.GetComponent<BoxCollider2D>();
+        // lvl up text
+        floatingTextMgr.Show(
+            "LVL UP",
+            16,
+            Color.white,
+            player.transform.position + // show above player
+                    new Vector3(
+                        0, playerBoxColl.bounds.extents.y + 0.08f, 0),
+            Vector3.up * 16,
+            2.0f
+            );
+        // plus max hp text
+        floatingTextMgr.Show(
+            "+" + Player.LEVELUP_HP_CHANGE +" MAX HP",
+            16,
+            Color.green,
+            player.transform.position + // show above player
+                    new Vector3(
+                        0, playerBoxColl.bounds.extents.y + 0, 0),
+            Vector3.up * 16,
+            2.0f
+            );
     }
 
     public void OnHpChange() {
