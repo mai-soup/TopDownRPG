@@ -3,8 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Crate : Fighter {
-    // TODO: make double crates into single when half their HP is out
+    [SerializeField] private GameObject singleCrate;
+    [SerializeField] private bool isDouble;
+
     protected override void Die() {
+        if (isDouble) {
+            Instantiate(singleCrate, this.transform.position, this.transform.rotation);
+        }
         Destroy(gameObject);
     }
 }

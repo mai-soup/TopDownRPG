@@ -101,6 +101,8 @@ MonoBehaviour:
   currentHp: 5
   maxHp: 5
   pushRecoverySpeed: 0.2
+  singleCrate: {fileID: 204713789004565356}
+  isDouble: 0
 --- !u!61 &204713789004565352
 BoxCollider2D:
   m_ObjectHideFlags: 0
